@@ -29,5 +29,6 @@ Request Body:
 
 ## Program execution
 ### Sring Boot Application
-  1. Start spring boot application : WebsiteSimilarityServiceApplication.java and execute above API's
+  1. Start spring boot application : 
+  * Do maven clean on project root directory and then excute WebsiteSimilarityServiceApplication.java
 
