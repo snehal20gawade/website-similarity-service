@@ -8,7 +8,7 @@ This project is developed in <br>
 
 Its simple REST API service developed with spring rest controller to compute the similarity of the contents of two URLs.
 
-When the REST API is called, it will fetch the content body of the two URLs (i.e.,
+When the REST API called, it will fetch the content body of the two URLs (i.e.,
 actual contents of webpage), and compute the similarity of their contents based
 on the similarity measure called the Jaccard Index.
 
