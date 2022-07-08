@@ -51,6 +51,18 @@ public class WebsiteSimilarityControllerITTest {
                 .andExpect(content().string("0.389"));
     }
 
+    @Test
+    public void givenInvalidWebsiteUrlURLShouldReturnBadRequestStatus() throws Exception {
+        String URL1 = "xyz.com";
+        String URL2 = "abcd";
+        mockMvc.perform(MockMvcRequestBuilders
+                .post(API_JACCORD_INDEX)
+                .content(asJsonString(new WebsiteSimilarityCheckDto(URL1, URL2)))
+                .contentType(MediaType.APPLICATION_JSON)
+                .accept(MediaType.APPLICATION_JSON))
+                .andExpect(status().isBadRequest());
+    }
+
     public static String asJsonString(final Object obj) {
         try {
             return new ObjectMapper().writeValueAsString(obj);

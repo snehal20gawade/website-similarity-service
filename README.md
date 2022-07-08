@@ -18,17 +18,39 @@ on the similarity measure called the Jaccard Index.
 To compare two ULR use below POST api with request body
    https://localhost:8080/api/jaccord-index/ 
 
-eg. request body: 
+# Examples
+1. Compared URL's with few similar words
+* **Jaccord index 0.389**
+
 
     {
        "webSiteURL1": "https://policies.google.com/technologies/voice?hl=en-GB&fg=1"
        "webSiteURL2":  "https://policies.google.com/technologies/wallet?hl=en-GB&fg=1"
     }
-  
+
+2.Compared URL's with almost similar content:
+ * Jacaard index **0.98**
+
+
+    {
+	  "webSiteURL1": "https://jobs.cisco.com/jobs/ProjectDetail/Software-Engineer-Internal-Applications-Intern-India-UHR/1379113?source=Cisco+Jobs+Career+Site&tags=CDC+Browse+all+jobs+careers",
+	
+	  "webSiteURL2":  "https://jobs.cisco.com/jobs/ProjectDetail/Software-Engineer-Internal-Applications-New-Grad-India-UHR/1379114?source=Cisco+Jobs+Career+Site&tags=CDC+Browse+all+jobs+careers"
+   }
+
+3. Compared same URL's would return **Jaccard Index 1**:
+
+
+    {
+	  "webSiteURL1": "https://policies.google.com/technologies/voice?hl=en-GB&fg=1",
+	
+	  "webSiteURL2":  "https://policies.google.com/technologies/voice?hl=en-GB&fg=1"
+}
 
 
 ## Program execution
 ### Sring Boot Application
-  1. Start spring boot application : 
-  * Do maven clean on project root directory and then excute WebsiteSimilarityServiceApplication.java
+Start spring boot application : <br>
+1. Do maven clean (mvn clean) on project root directory <br>
+2. Execute WebsiteSimilarityServiceApplication.java
 

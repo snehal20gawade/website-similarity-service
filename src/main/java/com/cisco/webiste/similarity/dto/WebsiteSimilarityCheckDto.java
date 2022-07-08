@@ -2,14 +2,20 @@ package com.cisco.webiste.similarity.dto;
 
 
 import javax.validation.constraints.NotBlank;
+import javax.validation.constraints.Pattern;
 
 public class WebsiteSimilarityCheckDto {
 
-    //TODO add regex to check valid URL
-    @NotBlank(message = "WebsiteURL1 can not be blank")
+    private final String REGEX_TO_CHECK_VALID_URL = "((http|https)://)(www.)?"
+            + "[a-zA-Z0-9@:%._\\+~#?&//=]"
+            + "{2,256}\\.[a-z]"
+            + "{2,6}\\b([-a-zA-Z0-9@:%"
+            + "._\\+~#?&//=]*)";
+
+    @Pattern(regexp = REGEX_TO_CHECK_VALID_URL, message = "Invalid URL WebsiteURL1")
     private String webSiteURL1;
 
-    @NotBlank(message = "WebsiteURL2 can not be blank")
+    @Pattern(regexp = REGEX_TO_CHECK_VALID_URL, message = "Invalid URL WebsiteURL2")
     private String webSiteURL2;
 
     public WebsiteSimilarityCheckDto(){
