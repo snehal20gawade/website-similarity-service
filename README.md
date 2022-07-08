@@ -21,8 +21,8 @@ To compare two ULR use below POST api with request body
 Request Body: 
 
     {
-       webSiteURL1: https://some.example.com <br>
-       webSiteURL2: https://some.another.example.com <br>
+       webSiteURL1: https://some.example.com
+       webSiteURL2: https://some.another.example.com
     }
   
 
