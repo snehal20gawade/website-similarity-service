@@ -1,7 +1,7 @@
 # Website Similarity REST API
 --------
 This project is developed in <br> 
-*  java version 1.8
+* java version 1.8
 * Spring Boot
 * jsoup: Java HTML Parser
 * Junit 5 and Mockito.
@@ -18,11 +18,11 @@ on the similarity measure called the Jaccard Index.
 To compare two ULR use below POST api with request body
    https://localhost:8080/api/jaccord-index/ 
 
-Request Body: 
+eg. request body: 
 
     {
-       webSiteURL1: https://some.example.com
-       webSiteURL2: https://some.another.example.com
+       "webSiteURL1": "https://policies.google.com/technologies/voice?hl=en-GB&fg=1"
+       "webSiteURL2":  "https://policies.google.com/technologies/wallet?hl=en-GB&fg=1"
     }
   
 
